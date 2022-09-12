@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "stable-diffusion-cli"
+version = "0.1.0"
+description = ""
+authors = ["Valentin Perret <perret.valentin@gmail.com>"]
+readme = "README.md"
+packages = [{include = "stable_diffusion_cli"}]
+
+
+[tool.poetry.dependencies]
+python = "~3.9"
+diffusers = "^0.2.4"
+ftfy = "^6.1.1"
+scipy = "^1.9.1"
+transformers = "^4.21.3"
+coloredlogs = "^15.0.1"
+
+
+[tool.poetry.group.dev.dependencies]
+ipython = "^8.4.0"
+bandit = "^1.7.4"
+black = "^22.8.0"
+flake8 = "^5.0.4"
+isort = "^5.10.1"
+pydocstyle = "^6.1.1"
+pylint = "^2.15.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.scripts]
+diffuse = "stable_diffusion_cli:diffuse_cli"
